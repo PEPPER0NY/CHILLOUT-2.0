@@ -13,30 +13,7 @@ namespace Chillout.DataAccess.Context
         }
 
         public DbSet<UserRto> Users { get; set; }
-        public DbSet<HistoryGameRto> HistoryGames { get; set; }
+        public DbSet<PassListRto> PassList { get; set; }
 
-        protected override void OnModelCreating(ModelBuilder modelBuilder)
-        {
-            modelBuilder.Entity<HistoryGameRto>(builder => 
-            {
-                builder
-                    .HasOne<UserRto>(e => e.LeftUser)
-                    .WithMany(e => e.HistoryGamesLeftUser)
-                    .HasForeignKey(e => e.LeftUserId)
-                    .IsRequired();
-
-                builder
-                    .HasOne<UserRto>(e => e.RightUser)
-                    .WithMany(e => e.HistoryGamesRightUser)
-                    .HasForeignKey(e => e.RightUserId)
-                    .IsRequired();
-
-                builder
-                    .HasOne<UserRto>(e => e.WinnerUser)
-                    .WithMany(e => e.HistoryGamesWinnerUser)
-                    .HasForeignKey(e => e.WinnerUserId)
-                    .IsRequired();
-            });
-        }
     }
 }

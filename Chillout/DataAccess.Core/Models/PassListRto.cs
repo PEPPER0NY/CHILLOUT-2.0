@@ -7,14 +7,10 @@ using System.Threading.Tasks;
 namespace Chillout.DataAccess.Core.Models
 {
     [Table("User")]
-    public class UserRto
+    public class PassListRto
     {
-        public int Id { get; set; }
-        public string Email { get; set; }
+        public int Website { get; set; }
         public int Login { get; set; }
         public int PassWord { get; set; }
-
     }
-
 }
-

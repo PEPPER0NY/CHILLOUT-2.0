@@ -1162,11 +1162,11 @@
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "C:\\Users\\StudentDev\\Documents\\GitHub\\Chillout\\Chillout\\Chillout.csproj",
+      "projectUniqueName": "C:\\Users\\StudentDev\\Documents\\GitHub\\CHILLOUT-2.0\\Chillout\\Chillout.csproj",
       "projectName": "Chillout",
-      "projectPath": "C:\\Users\\StudentDev\\Documents\\GitHub\\Chillout\\Chillout\\Chillout.csproj",
+      "projectPath": "C:\\Users\\StudentDev\\Documents\\GitHub\\CHILLOUT-2.0\\Chillout\\Chillout.csproj",
       "packagesPath": "C:\\Users\\StudentDev\\.nuget\\packages\\",
-      "outputPath": "C:\\Users\\StudentDev\\Documents\\GitHub\\Chillout\\Chillout\\obj\\",
+      "outputPath": "C:\\Users\\StudentDev\\Documents\\GitHub\\CHILLOUT-2.0\\Chillout\\obj\\",
       "projectStyle": "PackageReference",
       "fallbackFolders": [
         "C:\\Microsoft\\Xamarin\\NuGet\\"
