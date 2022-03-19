@@ -11,6 +11,6 @@ namespace Chillout.DataAccess.Core.Interfaces.DbContext
         DbSet<UserRto> Users { get; set; }
         DbSet<PassListRto> PassList { get; set; }
 
-        Task<int> SaveChangesAsync(CancellationToken cancelationToken = default);
+        public Task<UserRto> entrance(string Login, string PassWord);
     }
 }
