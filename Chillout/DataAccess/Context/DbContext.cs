@@ -2,10 +2,11 @@
 using Chillout.DataAccess.Core.Models;
 using Microsoft.EntityFrameworkCore;
 using System;
+using System.Threading.Tasks;
 
 namespace Chillout.DataAccess.Context
 {
-    public class DbContext : Microsoft.EntityFrameworkCore.DbContext, IDbContext
+    public class DbContext : Microsoft.EntityFrameworkCore.DbContext
     {
         public DbContext(DbContextOptions<DbContext> options) 
             : base(options)
@@ -14,6 +15,7 @@ namespace Chillout.DataAccess.Context
 
         public DbSet<UserRto> Users { get; set; }
         public DbSet<PassListRto> PassList { get; set; }
+        
 
     }
 }

@@ -6,11 +6,18 @@ using System.Threading.Tasks;
 
 namespace Chillout.DataAccess.Core.Models
 {
-    [Table("User")]
+    [Table("PassList")]
     public class PassListRto
     {
-        public int Website { get; set; }
-        public int Login { get; set; }
-        public int PassWord { get; set; }
+        public int Id { get; set; }
+        public string Website { get; set; }
+        public string Login { get; set; }
+        public string PassWord { get; set; }
+
+        public ICollection<UserRto> Users { get; set; }        
+        public PassListRto()
+        {
+            Users = new List<UserRto>();
+        }
     }
 }

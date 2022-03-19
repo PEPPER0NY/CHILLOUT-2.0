@@ -23,10 +23,10 @@ namespace Chillout.Migrations
                 constraints: table =>
                 {
                     table.PrimaryKey("PK_User", x => x.Id);
-                });
+                });             
 
             migrationBuilder.CreateTable(
-                name: "PassListRto",
+                name: "PassList",
                 columns: table => new
                 {
                     Id = table.Column<int>(nullable: false)

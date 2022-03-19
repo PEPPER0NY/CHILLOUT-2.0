@@ -11,9 +11,11 @@ namespace Chillout.DataAccess.Core.Models
     {
         public int Id { get; set; }
         public string Email { get; set; }
-        public int Login { get; set; }
-        public int PassWord { get; set; }
+        public string Login { get; set; }
+        public string PassWord { get; set; }
 
+        public int? PassListRtoId { get; set; }
+        public PassListRto PassListRto { get; set; }
     }
 
 }
