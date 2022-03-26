@@ -6,12 +6,10 @@ using System.Threading.Tasks;
 
 namespace Chillout.DataAccess.Core.Interfaces.DbContext
 {
-    public interface IDbContext : IDisposable, IAsyncDisposable
+    public interface IDbContext : IAsyncDisposable
     {
-        DbSet<UserRto> Users { get; set; }
-        DbSet<PassListRto> PassList { get; set; }
-
-        public Task<UserRto> entrance(string Login, string PassWord);
-        Task<int> SaveChangesAync(CancellationToken cancellationToken = default);
+        public DbSet<UserRto> User { get; set; }
+        public DbSet<PassListRto> PassList { get; set; }
+        Task<int> SaveChangesAsync(CancellationToken cancellationToken = default);
     }
 }
