@@ -1,4 +1,5 @@
-﻿using Chillout.DataAccess.Core.Models;
+﻿using Chillout.DataAccess.Context;
+using Chillout.DataAccess.Core.Models;
 using Microsoft.AspNetCore.Mvc;
 using Microsoft.EntityFrameworkCore;
 using System;
@@ -12,11 +13,11 @@ namespace Chillout.Controllers
     [ApiController]
     public class UserController : ControllerBase
     {
-        private readonly DbContext _DbContext;
+        public readonly DbContext1 _DbContext;
 
         public UserController(DbContext context)
         {
-            _DbContext = context;
+            _DbContext = (DbContext1)context;
         }
 
         // GET: api/Users
@@ -104,7 +105,7 @@ namespace Chillout.Controllers
         [HttpDelete("{id}")]
         public async Task<ActionResult<UserRto>> DeleteUser(string id)
         {
-            var user = await _DbContext.Users.FindAsync(id);
+            var user = await _DbContext.User.FindAsync(id);
             if (user == null)
             {
                 return NotFound();
@@ -118,7 +119,7 @@ namespace Chillout.Controllers
 
         private bool UserExists(string id)
         {
-            return _DbContext.User.Any(e => e.Id == id);
+            return _DbContext.User.Any(e => e.Id = id);
         }
     }
 }

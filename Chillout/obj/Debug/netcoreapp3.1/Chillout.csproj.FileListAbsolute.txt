@@ -60,3 +60,10 @@ C:\Users\titov\source\repos\Chillout\Chillout\bin\Debug\netcoreapp3.1\runtimes\w
 C:\Users\titov\source\repos\Chillout\Chillout\bin\Debug\netcoreapp3.1\runtimes\win-x64\native\e_sqlite3.dll
 C:\Users\titov\source\repos\Chillout\Chillout\bin\Debug\netcoreapp3.1\runtimes\win-x86\native\e_sqlite3.dll
 C:\Users\titov\source\repos\Chillout\Chillout\obj\Debug\netcoreapp3.1\Chillout.csprojAssemblyReference.cache
+C:\Users\StudentDev\Documents\GitHub\CHILLOUT-2.0\Chillout\obj\Debug\netcoreapp3.1\Chillout.csprojAssemblyReference.cache
+C:\Users\StudentDev\Documents\GitHub\CHILLOUT-2.0\Chillout\obj\Debug\netcoreapp3.1\Chillout.AssemblyInfoInputs.cache
+C:\Users\StudentDev\Documents\GitHub\CHILLOUT-2.0\Chillout\obj\Debug\netcoreapp3.1\Chillout.AssemblyInfo.cs
+C:\Users\StudentDev\Documents\GitHub\CHILLOUT-2.0\Chillout\obj\Debug\netcoreapp3.1\Chillout.csproj.CoreCompileInputs.cache
+C:\Users\StudentDev\Documents\GitHub\CHILLOUT-2.0\Chillout\obj\Debug\netcoreapp3.1\Chillout.MvcApplicationPartsAssemblyInfo.cache
+C:\Users\StudentDev\Documents\GitHub\CHILLOUT-2.0\Chillout\obj\Debug\netcoreapp3.1\Chillout.dll
+C:\Users\StudentDev\Documents\GitHub\CHILLOUT-2.0\Chillout\obj\Debug\netcoreapp3.1\Chillout.pdb
