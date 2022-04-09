@@ -15,7 +15,9 @@ namespace Chillout.DataAccess.Core.Models
         public string Login { get; set; }
         public string PassWord { get; set; }
 
-        public ICollection<UserRto> Users { get; set; }        
+        public ICollection<UserRto> Users { get; set; }
+        public DateTime CreateTime { get; internal set; }
+
         public PassListRto()
         {
             Users = new List<UserRto>();

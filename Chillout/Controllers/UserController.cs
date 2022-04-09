@@ -23,10 +23,10 @@ namespace Chillout.Controllers
         // GET: api/Users
         [HttpGet]
         public async Task<ActionResult<IEnumerable<UserRto>>> GetUser() => await _DbContext.User.ToListAsync();
-        
+
         // GET: api/Users/5
         [HttpGet("{id}")]
-        public async Task<ActionResult<UserRto>> GetUser(string id)
+        public async Task<ActionResult<UserRto>> GetUser(int id)
         {
             var user = await _DbContext.User.FindAsync(id);
 
@@ -74,36 +74,32 @@ namespace Chillout.Controllers
         // To protect from overposting attacks, enable the specific properties you want to bind to, for
         // more details, see https://go.microsoft.com/fwlink/?linkid=2123754.
         [HttpPost]
-        public async Task<ActionResult<UserRto>> PostUser(UserRto user)
+        public ActionResult<UserRto> PostUser(UserRto user)
         {
-            _DbContext.User.Add(user);
-            try
+            string login = user.Login;
+            string password = user.PassWord;
+
+            UserRto find = _DbContext.User.FirstOrDefault(t => t.Login == user.Login);
+            if (find != default)
             {
-                await _DbContext.SaveChangesAsync();
-            }
-            catch (DbUpdateException)
-            {
-                if (UserExists(user.Id))
+                if (find.PassWord == user.PassWord)
                 {
-                    return Conflict();
+                    return Ok();
                 }
                 else
                 {
-                    throw;
+                    return Unauthorized();
                 }
             }
-
-            return CreatedAtAction("GetUser", new { id = user.Id }, user);
-        }
-
-        private bool UserExists(int id)
-        {
-            throw new NotImplementedException();
+            else
+            {
+                return NotFound();
+            }
         }
 
         // DELETE: api/Users/5
         [HttpDelete("{id}")]
-        public async Task<ActionResult<UserRto>> DeleteUser(string id)
+        public async Task<ActionResult<UserRto>> DeleteUser(int id)
         {
             var user = await _DbContext.User.FindAsync(id);
             if (user == null)
@@ -117,9 +113,9 @@ namespace Chillout.Controllers
             return user;
         }
 
-        private bool UserExists(string id)
+        private bool UserExists(int id)
         {
-            return _DbContext.User.Any(e => e.Id = id);
+            return _DbContext.User.Any(e => e.Id == id);
         }
     }
 }

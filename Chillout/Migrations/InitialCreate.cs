@@ -59,16 +59,6 @@ namespace Chillout.Migrations
                         principalColumn: "Id",
                         onDelete: ReferentialAction.Cascade);
                 });
-
-            migrationBuilder.CreateIndex(
-                name: "IX_HistoryGame_LeftUserId",
-                table: "HistoryGame",
-                column: "LeftUserId");
-
-            migrationBuilder.CreateIndex(
-                name: "IX_HistoryGame_RightUserId",
-                table: "HistoryGame",
-                column: "RightUserId");
         }
 
         protected override void Down(MigrationBuilder migrationBuilder)
