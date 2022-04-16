@@ -1,4 +1,7 @@
+using Chillout.BusinesLogic.Core.Interfaces;
+using Chillout.BusinesLogic.Services;
 using Chillout.DataAccess.Context;
+using Chillout.DataAccess.Core.Interfaces.DbContext;
 using Microsoft.AspNetCore.Builder;
 using Microsoft.AspNetCore.Hosting;
 using Microsoft.EntityFrameworkCore;
@@ -20,7 +23,13 @@ namespace Chillout
         // This method gets called by the runtime. Use this method to add services to the container.
         public void ConfigureServices(IServiceCollection services)
         {
-            services.AddControllers();           
+            services.AddDbContext<IDbContext, DbContext1>(b => b.UseSqlite("Data Sourse=userdata.db; Foreign Keys=True"));
+
+            services.AddScoped<IUserService, UserService>();
+
+            services.AddControllers();
+            services.AddCors();
+            
         }
 
         // This method gets called by the runtime. Use this method to configure the HTTP request pipeline.
