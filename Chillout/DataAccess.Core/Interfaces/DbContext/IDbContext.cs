@@ -4,7 +4,7 @@ using System;
 using System.Threading;
 using System.Threading.Tasks;
 
-namespace Chillout.DataAccess.Core.Interfaces.DbContext
+namespace Chillout.DataAccess.Core.Interfaces.DbContext1
 {
     public interface IDbContext : IAsyncDisposable
     {

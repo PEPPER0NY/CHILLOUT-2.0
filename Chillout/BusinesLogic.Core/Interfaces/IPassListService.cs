@@ -1,13 +1,15 @@
 ﻿using Chillout.BusinesLogic.Core.Models;
+using System;
+using System.Collections.Generic;
+using System.Linq;
 using System.Threading.Tasks;
 
 namespace Chillout.BusinesLogic.Core.Interfaces
 {
-    public interface IUserService
+    interface IPassListService
     {
-        Task<UserInformationBlo> Registration(string Email, string Login, string PassWord);
         Task<UserInformationBlo> Get(int UserId);
-        Task<UserInformationBlo> Update(string Email, string Login, string Password, UserUpdateBlo userUpdateBlo);
+        Task<UserInformationBlo> Update(string Website, string Login, string PassWord, UserUpdateBlo userUpdateBlo);
         Task<bool> DoesExist(string Email, string Login);
     }
 }

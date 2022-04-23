@@ -1152,7 +1152,8 @@
   "projectFileDependencyGroups": {
     ".NETCoreApp,Version=v3.1": [
       "Microsoft.EntityFrameworkCore.Design >= 3.1.22",
-      "Microsoft.EntityFrameworkCore.Sqlite >= 3.1.22"
+      "Microsoft.EntityFrameworkCore.Sqlite >= 3.1.22",
+      "Microsoft.EntityFrameworkCore.Sqlite.Core >= 3.1.22"
     ]
   },
   "packageFolders": {
@@ -1206,6 +1207,10 @@
             "version": "[3.1.22, )"
           },
           "Microsoft.EntityFrameworkCore.Sqlite": {
+            "target": "Package",
+            "version": "[3.1.22, )"
+          },
+          "Microsoft.EntityFrameworkCore.Sqlite.Core": {
             "target": "Package",
             "version": "[3.1.22, )"
           }

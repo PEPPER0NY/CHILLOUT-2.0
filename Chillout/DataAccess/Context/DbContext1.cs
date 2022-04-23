@@ -1,13 +1,13 @@
-﻿using Chillout.DataAccess.Core.Interfaces.DbContext;
+﻿using Chillout.DataAccess.Core.Interfaces.DbContext1;
 using Chillout.DataAccess.Core.Models;
 using Microsoft.AspNetCore.Mvc;
 using Microsoft.EntityFrameworkCore;
 
 namespace Chillout.DataAccess.Context
 {
-    public class DbContext1 : Microsoft.EntityFrameworkCore.DbContext, IDbContext 
+    public class DbContext1 : DbContext, IDbContext 
     {
-        public DbContext1(DbContextOptions<DbContext> options) 
+        public DbContext1(DbContextOptions<DbContext1> options) 
             : base(options)
         {
             

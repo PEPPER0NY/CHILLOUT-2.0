@@ -15,9 +15,9 @@ namespace Chillout.Controllers
     {
         public readonly DbContext1 _DbContext;
 
-        public UserController(DbContext context)
+        public UserController(DbContext1 context)
         {
-            _DbContext = (DbContext1)context;
+            _DbContext = context;
         }
 
         // GET: api/Users

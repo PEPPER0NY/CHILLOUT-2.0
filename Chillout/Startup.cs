@@ -1,7 +1,7 @@
 using Chillout.BusinesLogic.Core.Interfaces;
 using Chillout.BusinesLogic.Services;
 using Chillout.DataAccess.Context;
-using Chillout.DataAccess.Core.Interfaces.DbContext;
+using Chillout.DataAccess.Core.Interfaces.DbContext1;
 using Microsoft.AspNetCore.Builder;
 using Microsoft.AspNetCore.Hosting;
 using Microsoft.EntityFrameworkCore;
@@ -26,10 +26,11 @@ namespace Chillout
             services.AddDbContext<IDbContext, DbContext1>(b => b.UseSqlite("Data Sourse=userdata.db; Foreign Keys=True"));
 
             services.AddScoped<IUserService, UserService>();
+            services.AddScoped<IPassListService, PassListService>();
 
             services.AddControllers();
             services.AddCors();
-            
+
         }
 
         // This method gets called by the runtime. Use this method to configure the HTTP request pipeline.
@@ -48,9 +49,9 @@ namespace Chillout
 
             using var scope = app.ApplicationServices.CreateScope();
 
-            var dbContext = scope.ServiceProvider
+            var dbContext1 = scope.ServiceProvider
                 .GetRequiredService<DbContext1>();
-            dbContext.Database.Migrate();
+            dbContext1.Database.Migrate();
 
 
             app.UseEndpoints(endpoints =>
