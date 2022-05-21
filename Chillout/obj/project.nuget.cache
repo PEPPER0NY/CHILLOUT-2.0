@@ -1,8 +1,8 @@
 {
   "version": 2,
-  "dgSpecHash": "/dx8+9cxHSAb+TDtY1J6cmtsL9P5Np+bQaeUY/TzmE7s8nc9WRZxtd5X36h4Ux/GPKneAApIEhZaud/JAyGvSg==",
+  "dgSpecHash": "1zJ4ZJnK8foS6H6V19WEKyW0EznxzX/HPOKtli3OooOf8v3CkvrfiMGVUp/VI2eoWHKrF5pXHuYsPzo0LKbMqA==",
   "success": true,
-  "projectFilePath": "C:\\Users\\Arthur\\Documents\\GitHub\\CHILLOUT-2.0\\Chillout\\Chillout.csproj",
+  "projectFilePath": "E:\\C#\\CHILLOUT-2.0\\Chillout\\Chillout.csproj",
   "expectedPackageFiles": [
     "C:\\Users\\Arthur\\.nuget\\packages\\microsoft.bcl.asyncinterfaces\\1.1.1\\microsoft.bcl.asyncinterfaces.1.1.1.nupkg.sha512",
     "C:\\Users\\Arthur\\.nuget\\packages\\microsoft.bcl.hashcode\\1.1.1\\microsoft.bcl.hashcode.1.1.1.nupkg.sha512",

@@ -1161,11 +1161,11 @@
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "C:\\Users\\Arthur\\Documents\\GitHub\\CHILLOUT-2.0\\Chillout\\Chillout.csproj",
+      "projectUniqueName": "E:\\C#\\CHILLOUT-2.0\\Chillout\\Chillout.csproj",
       "projectName": "Chillout",
-      "projectPath": "C:\\Users\\Arthur\\Documents\\GitHub\\CHILLOUT-2.0\\Chillout\\Chillout.csproj",
+      "projectPath": "E:\\C#\\CHILLOUT-2.0\\Chillout\\Chillout.csproj",
       "packagesPath": "C:\\Users\\Arthur\\.nuget\\packages\\",
-      "outputPath": "C:\\Users\\Arthur\\Documents\\GitHub\\CHILLOUT-2.0\\Chillout\\obj\\",
+      "outputPath": "E:\\C#\\CHILLOUT-2.0\\Chillout\\obj\\",
       "projectStyle": "PackageReference",
       "configFilePaths": [
         "C:\\Users\\Arthur\\AppData\\Roaming\\NuGet\\NuGet.Config",
