@@ -6,7 +6,7 @@ using System.Threading.Tasks;
 
 namespace Chillout.DataAccess.Core.Interfaces.DbContext1
 {
-    public interface IDbContext : IAsyncDisposable
+    public interface IDbContext1 : IAsyncDisposable
     {
         public DbSet<UserRto> User { get; set; }
         public DbSet<PassListRto> PassList { get; set; }
